@@ -330,7 +330,7 @@ function productReview(products){
   for(let i = 0 ; i< products.length; i++){
     const review1 = products[i].reviews
     const review3 = products[i].reviews
-    return review1 ,review3
+    return review1 
   }
 }
 let show = productReview(products)
@@ -368,12 +368,16 @@ console.log(show);
   
 function averageRating(products){
   let allavg = 0 ;
+  let totalReviews = 0;
 for(let i =0 ; i<products.length; i++){
   for(let j=0 ; j<products[i].reviews.length; j++){
     allavg += products[i].reviews[j].rating
+    totalReviews++
   }
+
 }
-  return allavg
+let sum = allavg / totalReviews
+  return sum
 }
 
 console.log(averageRating(products));
@@ -390,10 +394,10 @@ console.log(averageRating(products));
 
   function getProductById(products , productId){
     for(let i = 0 ; i <products.length ; i++){
-      if(products[i].id === productId){
+      if(products[i].id == productId){
         return products[i]
       }
     }
   }
-
-console.log(getProductById(products , 103));
+let productId = prompt("Enter Product id:")
+console.log(getProductById(products , productId));
