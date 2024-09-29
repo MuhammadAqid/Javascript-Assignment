@@ -439,5 +439,5 @@ function getProductById(products, productId) {
     }
   }
 }
-// let productId = prompt("Enter Product id:")
-// console.log(getProductById(products , productId));
+let productId = prompt("Enter Product id:")
+console.log(getProductById(products , productId));
